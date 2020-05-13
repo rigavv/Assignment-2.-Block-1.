@@ -104,6 +104,7 @@ class ViewController: UIViewController {
         for i in 0...number {
             reverseLable.text! += "\(number - i) "
         }
+        
     }
     
 // --------
