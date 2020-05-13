@@ -86,17 +86,7 @@ class ViewController: UIViewController {
 //Task 1. Display the square and cube of the number. Func
     
     func dispSquareAndCubeNumber (number : Int, factor : Int) {
-        if factor == 2 {
-            dispSquareAndCubeNumberLable.text = "\(pow(Decimal(number), 2))"
-        }
-        
-        else if factor == 3 {
-            dispSquareAndCubeNumberLable.text = "\(pow(Decimal(number), 3))"
-        }
-        
-        else {
-            dispSquareAndCubeNumberLable.text = "Ups! Func can`t do this."
-        }
+            dispSquareAndCubeNumberLable.text = "\(pow(Decimal(number), factor))"
     }
         
 // --------
