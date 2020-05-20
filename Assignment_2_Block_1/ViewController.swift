@@ -96,23 +96,19 @@ class ViewController: UIViewController {
             dispSquareAndCubeNumberLable.text = "Число \(number) в степени \(factor) =  \(numb)"
         }
     }
-    
-   
-        
+
 // --------
     
 // Task 2. Display on the screen all the numbers to the given and in reverse order to 0. Func
     
     func reverseOrder (number : Int) {
         reverseLable.text = ""
-        for i in 0...number {
-            reverseLable.text! += "\(i) "
-        }
-        
-        reverseLable.text! += "Спадание "
-        
-        for i in 0...number {
-            reverseLable.text! += "\(number - i) "
+        for i in 0...(number*2) {
+            if (number-i)==0 {
+                reverseLable.text! += "Спадание "
+            } else {
+                reverseLable.text! += "\(abs(number-i)) "
+            }
         }
     }
     
