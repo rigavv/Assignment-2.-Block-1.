@@ -20,7 +20,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var dispSquareAndCubeNumberLable: UILabel!
 // --------
     
-
 // Task 2. Display on the screen all the numbers to the given and in reverse order to 0. Lable
     @IBOutlet weak var reverseLable: UILabel!
 // --------
@@ -45,7 +44,7 @@ class ViewController: UIViewController {
         
 //Task 1. Display the square and cube of the number. Call
         
-        dispSquareAndCubeNumber (number: 2, factor: 3)
+        dispSquareAndCubeNumber (number: 3, factor: 0)
         
 // ----
         
@@ -86,8 +85,19 @@ class ViewController: UIViewController {
 //Task 1. Display the square and cube of the number. Func
     
     func dispSquareAndCubeNumber (number : Int, factor : Int) {
-            dispSquareAndCubeNumberLable.text = "\(pow(Decimal(number), factor))"
+        var numb = 1
+        if factor == 0 {
+            numb = 1
+            dispSquareAndCubeNumberLable.text = "Число \(number) в степени \(factor) =  \(numb)"
+        } else {
+            for _ in 1...factor {
+                numb *= number
+            }
+            dispSquareAndCubeNumberLable.text = "Число \(number) в степени \(factor) =  \(numb)"
+        }
     }
+    
+   
         
 // --------
     
@@ -104,7 +114,6 @@ class ViewController: UIViewController {
         for i in 0...number {
             reverseLable.text! += "\(number - i) "
         }
-        
     }
     
 // --------
